@@ -1,0 +1,32 @@
+{
+  "name": "library-boilerplate-example",
+  "version": "1.0.0",
+  "description": "library-boilerplate-example-description",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/library-boilerplate-author/library-boilerplate.git"
+  },
+  "keywords": [
+    "library-boilerplate-keywords"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/library-boilerplate-author/library-boilerplate/issues"
+  },
+  "homepage": "https://github.com/library-boilerplate-author/library-boilerplate",
+  "dependencies": {
+    "react": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.7",
+    "babel-loader": "^6.2.4",
+    "node-libs-browser": "^1.0.0",
+    "react-hot-loader": "^1.2.7",
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
