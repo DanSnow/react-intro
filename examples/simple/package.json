@@ -18,9 +18,7 @@
     "url": "https://github.com/library-boilerplate-author/library-boilerplate/issues"
   },
   "homepage": "https://github.com/library-boilerplate-author/library-boilerplate",
-  "dependencies": {
-    "react": "^15.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
