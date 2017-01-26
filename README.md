@@ -1,6 +1,8 @@
 React Intro
 ===========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/DanSnow/react-intro.svg)](https://greenkeeper.io/)
+
 This is a React component for step-by-step guide and feature introduction.   
 Inspire by [intro.js](http://introjs.com/).   
 Currently, it is a very simple version.
