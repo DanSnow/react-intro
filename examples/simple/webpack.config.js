@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   devtool: 'eval',
@@ -15,24 +15,28 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   resolve: {
     alias: {
       'react-intro': path.join(__dirname, '..', '..', 'src')
     },
-    extensions: ['', '.js']
+    extensions: ['.js'],
+    modules: ['node_modules', path.join(__dirname, '..', '..', 'node_modules')]
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      exclude: /node_modules/,
-      include: __dirname
-    }, {
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, '..', '..', 'src')
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['react-hot-loader', 'babel-loader'],
+        exclude: /node_modules/,
+        include: __dirname
+      },
+      {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        include: path.join(__dirname, '..', '..', 'src')
+      }
+    ]
   }
-};
+}

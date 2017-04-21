@@ -1,46 +1,48 @@
-import React, { Component } from 'react';
-import Demo from './Demo';
-import IntroRoot from 'react-intro/IntroRoot';
-import Intro from 'react-intro/Intro';
+import React, {Component} from 'react'
+import Demo from './Demo'
+import IntroRoot from 'react-intro/IntroRoot'
+import Intro from 'react-intro/Intro'
 
 export default class App extends Component {
-  constructor(...args) {
-    super(...args);
-    this.handleFinish = this.handleFinish.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+  constructor (...args) {
+    super(...args)
+    this.handleFinish = this.handleFinish.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleFinish() {
-    this.setState({ start: false });
+  handleFinish () {
+    this.setState({start: false})
   }
 
-  handleClick() {
-    this.setState({ start: true });
+  handleClick () {
+    this.setState({start: true})
   }
 
-  render() {
+  render () {
     return (
       <div>
-        <button style={ styles.btn } onClick={ this.handleClick }> Start Demo </button>
-        <IntroRoot start={ this.state.start } onFinish={ this.handleFinish }>
-          <div style={ styles.inlineBlock }>
-            <Intro position='right' text='intro at right' step={ 1 }>
+        <button style={styles.btn} onClick={this.handleClick}>
+          {' '}Start Demo{' '}
+        </button>
+        <IntroRoot start={this.state.start} onFinish={this.handleFinish}>
+          <div style={styles.inlineBlock}>
+            <Intro position='right' text='intro at right' step={1}>
               <Demo text='Component1' color='#ff3300' />
             </Intro>
           </div>
-          <div style={ styles.inlineBlock }>
-            <Intro text='intro at bottom' step={ 2 }>
+          <div style={styles.inlineBlock}>
+            <Intro text='intro at bottom' step={2}>
               <Demo text='Component2' color='#33ff00' />
             </Intro>
           </div>
         </IntroRoot>
       </div>
-    );
+    )
   }
 
   state = {
     start: false
-  };
+  }
 }
 
 const styles = {
@@ -58,4 +60,4 @@ const styles = {
     width: '50%',
     textAlign: 'center'
   }
-};
+}

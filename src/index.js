@@ -1,2 +1,2 @@
-export IntroRoot from './IntroRoot';
-export Intro from './Intro';
+export IntroRoot from './IntroRoot'
+export Intro from './Intro'
